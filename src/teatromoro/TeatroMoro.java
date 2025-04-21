@@ -88,7 +88,7 @@ public class TeatroMoro {
             int asiento = sc.nextInt();
             if (asiento < 1 || asiento > 5 || getEstadoCompra(asiento)) {
                 System.out.println("Asiento inválido o ya comprado.");
-                i--; // Permitir reintentar ese asiento
+                i--;
                 continue;
             }
 
@@ -178,7 +178,6 @@ public class TeatroMoro {
         System.out.println("Total ingresos: $" + (int) totalIngresos);
     }
 
-    // Métodos auxiliares para acceso y asignación
     public static boolean getEstadoReserva(int num) {
         return switch (num) {
             case 1 -> reserva1 || num1 != 0;
