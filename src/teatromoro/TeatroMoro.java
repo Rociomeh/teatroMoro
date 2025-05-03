@@ -19,7 +19,7 @@ public class TeatroMoro {
         while (continuar) {
             System.out.println("\n--- MENÚ ---");
             System.out.println("1. Comprar entrada");
-            System.out.println("2. Visualizar resumen de ventas");
+            System.out.println("2. Ver resumen de ventas");
             System.out.println("3. Imprimir boleta");
             System.out.println("4. Mostrar ingresos totales");
             System.out.println("5. Salir");
@@ -27,23 +27,12 @@ public class TeatroMoro {
             int opcion = sc.nextInt();
 
             switch (opcion) {
-                case 1:
-                    comprarEntradas(sc);
-                    break;
-                case 2:
-                    visualizarVentas();
-                    break;
-                case 3:
-                    imprimirBoletas();
-                    break;
-                case 4:
-                    mostrarIngresosTotales();
-                    break;
-                case 5:
-                    continuar = false;
-                    break;
-                default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                case 1 -> comprarEntradas(sc);
+                case 2 -> visualizarVentas();
+                case 3 -> imprimirBoletas();
+                case 4 -> mostrarIngresosTotales();
+                case 5 -> continuar = false;
+                default -> System.out.println("Opción no válida. Intente nuevamente.");
             }
         }
 
